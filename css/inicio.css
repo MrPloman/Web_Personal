@@ -1,0 +1,191 @@
+body{
+    background-color: rgb(228, 228, 228);
+}
+
+header{
+    background-color: rgb(76, 98, 141)
+}
+
+.logo{
+    width: 110px;
+    margin-top: 10px
+}
+
+hgroup{
+    color: rgb(203, 206, 216);
+    margin-top: 10px;
+}
+
+#title{
+    text-align: right;
+    font-size: 50px;
+    font-family: 'Old Standard TT', serif;
+
+}
+
+#subtitle{
+    text-align: right;
+    font-size: 25px;
+    font-family: 'Old Standard TT', serif;
+}
+
+a {
+    color:rgb(89, 92, 122); 
+    text-decoration: inherit;
+}
+
+a:hover{
+    text-decoration:none;
+    color:rgb(0, 0, 0); 
+}
+
+nav{
+    background-color:rgba(139, 155, 185, 0.541);
+    padding: 1px;
+}
+
+nav>ul {
+    color: rgb(0, 0, 0);
+    font-size: 20px;
+    margin-top: 8px;
+    margin-bottom: 7px;
+    font-family: 'Sorts Mill Goudy', serif;
+}
+
+.home{
+    text-align: start;
+}
+
+.portfolio{
+    text-align: center;
+}
+
+#pre{
+    text-align: center;
+
+}
+
+#presentation{
+    text-align: justify;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    font-family: 'Old Standard TT', serif;
+}
+
+.division{
+    background-color:rgba(139, 155, 185, 0.541);
+    text-align: center;
+    align-items: center;
+    margin-bottom: 30px;
+    height: 50px;
+}
+#inter{
+    margin-top: 5px;
+    font-size: 30px;
+    color: rgb(0, 0, 0);
+    font-family: 'Old Standard TT', serif;
+}
+.contact{
+    text-align: end;
+}
+
+p{
+    text-align: justify;
+    justify-content: center;
+    font-size: 15px;
+    font-family: 'Old Standard TT', serif;
+}
+
+#foto{
+    width: 200px;
+    max-width: 100%;
+    height: auto;
+    margin-left: 15px;
+    margin-top: 15px;
+    border-radius: 38px 38px 38px 38px;
+    -moz-border-radius: 38px 38px 38px 38px;
+    -webkit-border-radius: 38px 38px 38px 38px;
+    border: 0px solid #000000;
+}
+
+#info{
+    text-align: left;
+    margin-top: 15px;
+}
+
+#education{
+    text-align: left;
+    margin-top: 20px;
+}
+
+.list{
+    margin-top: 30px;
+    margin-bottom: 22px;
+    justify-content: center;
+}
+
+h2{
+    text-align: center;
+    font-family: 'Old Standard TT', serif;
+}
+
+h3{
+    text-align: left;
+    font-family: 'Old Standard TT', serif;
+}
+
+h6{
+    text-align: left;
+    font-family: 'Old Standard TT', serif;
+}
+#experience{
+    text-align: left;
+    margin-top: 20px;
+}
+
+#titskills{
+    text-align: center;
+}
+
+#skills{
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 40px;
+}
+
+.logofront{
+    width: 240px;
+}
+
+li{
+    font-family: 'Old Standard TT', serif;
+}
+
+.otros{
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+#owner{
+    margin-bottom: 40px;
+}
+
+#music{
+    margin-bottom: 40px;
+}
+
+
+.loguito{
+    width: 30px;
+    margin-right: 5px;
+}
+
+footer{
+    background-color: rgba(139, 155, 185, 0.541);
+    height: 100px;
+    justify-content: center;
+}
+
+#logosfot{
+    margin-top: 30px;
+}
