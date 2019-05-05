@@ -1,39 +1,234 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en-ES">
 <head>
     <meta charset="UTF-8">
-    <title> Pol Plana Web </title>
+    <title> Web Personal de Pol Plana </title> 
+    <meta name="description" content="Web Developer, Diseñador de Sonido y Contenido Audiovisual">
     <link rel="stylesheet" href="../css/reset.css">
     <link rel="stylesheet" href="../css/bootstrap.css">
     <link rel="stylesheet" href="../css/inicio.css">
     <link href="https://fonts.googleapis.com/css?family=Economica|Old+Standard+TT|Sanchez|Sorts+Mill+Goudy|Special+Elite|Zilla+Slab" rel="stylesheet">
     <script src="../js/modernizr.js"></script>
-    <script src="../js/jquery-3.3.1.slim.min.js"></script>
+    <script src="../js/jquery-3.2.1.min.js"></script>
+    <script src="../js/jquery.validate.js"></script>
+    <script src="../js/additional-methods.js"></script>
     <script src="../js/popper.min.js"></script>
     <script src="../js/bootstrap.min.js"></script>
     <script src="../js/inicio.js"></script>
 </head>
 <body>
 <!--Header-->
-    <div class="container-fluid">
-        <header class="row justify-content-between">
+    <div id="cabecera" class="container-fluid">
+        <div class="row justify-content-between">
+            <div class="col-xs-6 col-sm-6 col-md-6 col-lg-2 btn btn-sm form-inline">
+                <button type="button" class="btn btn-md botones" data-toggle="modal" data-target="#login">Login</button>
+                <button type="button" class="btn btn-md botones" data-toggle="modal" data-target="#register">Register</button>
+            </div>
+            <form id ="search1" class="col-xs-6 col-sm-6 col-md-6 col-lg-3 form-inline needs-validation" action ="#" method="POST" novalidate>
+                <i class="fas fa-search" aria-hidden="true"></i>
+                <input class="form-control form-control-sm ml-3 w-75" type="text" placeholder="Search" aria-label="Search" value="" required>
+                <button class="btn aqua-gradient btn-rounded btn-sm my-0 botones" type="submit">Search</button>
+            </form>
+        </div>
+        <header class="row row justify-content-between">
             <figure class="col-xs-1 col-sm-2 d-none d-sm-block">
                 <img class="logo" src="../media/logoPolblanc.png" alt="logo">
             </figure>
             <hgroup class="col-xs-1 col-sm-6"><span>
-                <h1 id="title"> Pol Plana Ayet </h1>
-                <h2 id="subtitle">Front-End, Sound Designer, Musician</h2>
+                <h2 id="title"> Pol Plana Ayet </h2>
+                <h1 id="subtitle">Front-End, Sound Designer, Musician</h1>
             </hgroup></span>
         </header>
     </div>
+<!-- Modal login -->
+<div class="modal fade" id="login" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Login</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+<!-- Login inter-->
+            <div class="modal-body">
+                <form>
+                    <div class="form-row">
+                        <div class="col-sm-3 my-1">
+                        <label class="sr-only" for="inlineFormInputName">Name</label>
+                        <input type="text" class="form-control" id="inlineFormInputName" placeholder="Username">
+                        </div>
+                        <div class="col-sm-3 my-1">
+                        <label class="sr-only" for="inlineFormInputGroupUsername">Username</label>
+                        <div class="input-group">
+                            <input type="text" class="form-control" id="inlineFormInputGroupUsername" placeholder="Password">
+                        </div>
+                        </div>
+                        <div class="col-auto my-1">
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="autoSizingCheck2">
+                            <label class="form-check-label" for="autoSizingCheck2">
+                            Remember me
+                            </label>
+                        </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+<!-- fin Login inter-->
+            <div class="modal-footer">
+              <button type="button" class="botones" data-dismiss="modal">Close</button>
+              <button type="button" class="botones">Login</button>
+            </div>
+          </div>
+        </div>
+      </div>
+<!-- Modal register -->
+<div class="modal fade" id="register" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Register</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+<!-- Register Intern -->           
+            <div class="modal-body">
+                <form id="formRegister" method="POST" action="#">
+                    <div class="form-row">
+                        <div class="form-group col-md-3">
+                            <label for="inputEmail4">Username</label>
+                            <input name="username" type="user" class="form-control" id="inputUsername" placeholder="Ploman">
+                        </div>
+                        <div class="form-group col-md-3">
+                            <label for="inputEmail4">Email</label>
+                            <input name="email" type="email" class="form-control" id="inputEmail" placeholder="user@mail.com">
+                        </div>
+                        <div class="form-group col-md-3">
+                            <label for="inputPassword4">Password</label>
+                            <input name="password" type="password" class="form-control" id="inputPassword" placeholder="12345678">
+                        </div>
+                        <div class="form-group col-md-3">
+                            <label for="inputRepassword4">Repeat Pass</label>
+                            <input name="repassword" type="password" class="form-control" id="inputRePassword" placeholder="12345678">
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group col-md-4">
+                            <label for="inputFirstName">First Name</label>
+                            <input name="firstName" type="text" class="form-control" id="firstName" placeholder="Pol">
+                        </div>
+                        <div class="form-group col-md-4">
+                            <label for="inputFirstSurname">First Surname</label>
+                            <input name="firstSurname" type="text" class="form-control" id="firstSurname" placeholder="Plana">
+                        </div>
+                        <div class="form-group col-md-4">
+                            <label for="input">Second Surname</label>
+                            <input name="secondSurname" type="text" class="form-control" id="secondSurname" placeholder="Ayet">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="inputAddress">Address</label>
+                        <input name="adress" type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
+                    </div>
+                    <div class="form-group">
+                        <label for="inputAddress2">Address 2</label>
+                        <input name="adress2" type="text" class="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor">
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <label for="inputCity">City</label>
+                            <input name="city" type="text" class="form-control" id="inputCity">
+                        </div>
+                        <div class="form-group col-md-4">
+                            <label for="inputState">State</label>
+                            <select name="state" id="inputState" class="form-control">
+                                <option selected>Choose...</option>
+                                <option>...</option>
+                                <option>Spain</option>
+                                <option>Bulgary</option>
+                                <option>Japan</option>
+                            </select>
+                        </div>
+                        <div class="form-group col-md-2">
+                        <label for="inputZip">Zip/CP</label>
+                        <input name="zip" type="text" class="form-control" id="inputZip">
+                        </div>
+                    </div>
+                </div>
+                    <div class="modal-footer">
+                        <button type="button" class="botones" data-dismiss="modal">Close</button>
+                        <button type="submit" class="botones">Register</button>
+                    </div>
+            </form>
+          <!--FIN REGISTER INTERN-->
+            </div>
+        </div>
+      </div>
+
 <!--NavBar-->
     <nav class="container-fluid">
         <ul class="row justify-content-center">
-            <li class="col-4 home"><a href="#">Home</a></li>
-            <li class="col-4 portfolio"><a href="#">Portfolio</a></li>
-            <li class="col-4 contact"><a href="#">Contact</a></li>
+            <li class="col-4 home"><a title="Home" href="#">Home</a></li>
+            <li class="col-4 portfolio"><a title="Portfolio" href="#">Portfolio</a></li>
+            <li class="col-4 contact" data-toggle="modal" data-target="#modalcontact" data-whatever="@mdo"><a title="Contact" href="#modalcontact">Contact</a></li>
         </ul>
     </nav>
+<!--Modal Contact-->
+    <div class="modal fade" id="modalcontact" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+        <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">New message</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+        <div id="contacto" class="modal-body">
+            <form class="needs-validation" action ="inicio.html" method="POST" novalidate>
+                <div id="divFrom" class="form-group">
+                    <label for="validationCustom01"class="col-form-label">From:</label>
+                    <input type="text" class="form-control" id="from-name" placeholder="from@mail.com" value="" required>
+                    <div class="valid-feedback">
+                        Looks good!
+                    </div>
+                    <div class="invalid-feedback">
+                        This is not an email!
+                    </div>
+                </div>
+                <div id="divRec" class="form-group">
+                    <label for="validationCustom02" class="col-form-label">Recipient:</label>
+                    <input type="text" class="form-control" id="recipient-name" placeholder="Subject" value="" required>
+                    <div class="valid-feedback">
+                        Looks good!
+                    </div>
+                    <div class="invalid-feedback">
+                        Please introduce a Subject
+                    </div>
+                </div>
+                <div id="divMess" class="form-group">
+                    <label for="validationDefault03" class="col-form-label">Message:</label>
+                    <textarea class="form-control" id="message-text" value="" required></textarea>
+                </div>
+                <div class="form-group">
+                    <div class="form-check">
+                      <input class="form-check-input" type="checkbox" value="" id="invalidCheck2" required>
+                      <label class="form-check-label" for="invalidCheck2">
+                        Agree to terms and conditions
+                      </label>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="botones" data-dismiss="modal">Close</button>
+                    <button id="submit" type="submit" class="botones"> Send Message</button>
+                </div>
+            </form>
+        </div>
+        </div>
+    </div>
+    </div>
+
 <!--Presentation-->
     <section id="pre" class="container">
         <div class="row justify-content-center">
@@ -176,11 +371,12 @@
                 </div>
             </article>
         </section>
+<!-- Fotter-->
     <footer class="container-fluid">
         <div class="row justify-content-around">
             <div class="col-auto">
                 <figure id="logosfot">
-                    <a href="https://www.linkedin.com/in/polplanaayet" target="_blank"><img class="loguito" src="../media/linkedin.png"></a>
+                    <a title="linkedin" href="https://www.linkedin.com/in/polplanaayet" target="_blank"><img id="linkedin" class="loguito" src="../media/linkedin.png"></a>
                     <a href="https://www.instagram.com/polploman/" target="_blank"><img class="loguito" src="../media/insta.png"></a>
                     <a href="https://twitter.com/PolBonham" target="_blank"><img class="loguito" src="../media/twitter.png"></a>
                 </figure>

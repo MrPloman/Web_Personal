@@ -2,8 +2,18 @@ body{
     background-color: rgb(228, 228, 228);
 }
 
-header{
+#cabecera{
     background-color: rgb(76, 98, 141)
+}
+
+.botones{
+    font-family: 'Old Standard TT', serif;
+    background-color:rgb(139, 155, 185, 0.75);
+    border-radius: 15%;
+}
+.modal-body{
+    background-color: rgb(228, 228, 228);
+    font-family: 'Old Standard TT', serif;
 }
 
 .logo{
@@ -131,6 +141,10 @@ h2{
 
 h3{
     text-align: left;
+    font-family: 'Old Standard TT', serif;
+}
+
+h5{
     font-family: 'Old Standard TT', serif;
 }
 
